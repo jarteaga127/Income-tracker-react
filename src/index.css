@@ -13,6 +13,7 @@ body {
 }
 
 header {
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 8px 16px;
@@ -22,6 +23,20 @@ header {
 h1 {
  color: #a9e9ff;
 }
+
+@media (max-width: 420px) {
+
+.App {
+  margin: 0 auto;
+}
+
+  h1 {
+    font-size: 16px;
+  }
+  
+}
+
+
 
 input {
   border: none;
@@ -37,10 +52,17 @@ input {
   padding: 8px 16px;
 }
 
+@media (max-width: 420px) {
+
+  .total-income {
+    font-size: 16px;
+  }
+  
+}
+
 
 
 .income-form {
-
   display: block;
 }
 
@@ -50,6 +72,7 @@ input {
 
 
 .form-inner {
+
   border-radius: 8px;
   margin-bottom: 32px;
   display: flex;
@@ -113,6 +136,78 @@ margin-bottom: 32px;
   background-color: #2a72fa;
 }
 
+@media (max-width: 420px) {
+  .form-inner {
+    margin-bottom: auto auto 16px;
+    display: block;
+  }
+
+  .form-inner > input {
+    width: 100%;
+  }
+
+  .income-form, .income-list {
+    margin-left: 16px;
+    margin-right: 16px;
+    }
+    
+    .form-inner > input {
+      font-size: 14px;
+    }
+    
+    
+    .form-inner > input[type="text"] {
+      border-radius: 8px 8px 0 0;
+      color: #fff;
+    }
+    
+    .form-inner > input[type="date"] {
+      border-radius: none;
+      min-width: 200px;
+      color: #fff;
+    }
+    
+    .form-inner > input[type="submit"] {
+      border-radius: 0 0 8px 8px;
+      color: #fff;
+       background-color: #314061;
+      cursor: pointer;
+    }
+    .income-list {
+      padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 32px;
+    }
+    
+    .remove-item {
+      width: 100%;
+      padding: 8px 16px;
+      cursor: pointer;
+      color: #fff;
+      background-color: #314061;
+      border: none;
+      border-radius: 8px 8px 0 0;
+    }
+}
+
+@media (max-width: 912px) {
+
+  .income-form, .income-list {
+    margin-left: 16px;
+    margin-right: 16px;
+    }
+    
+    .form-inner > input {
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    .remove-item {   
+      font-size: 14px;
+    }
+  
+}
+
 .income-item {
 display: flex;
 color: #fff;
@@ -126,4 +221,20 @@ border-radius: 8px;
 .desc, .price, .date {
   padding: 8px 16px;
   margin-left: 24px;
+  
 }
+
+@media (max-width: 420px) {
+
+  .income-item {
+    font-size: 14px;
+    display: block;
+  }
+  
+}
+
+@media (max-width: 912px) {
+  .income-item {
+    font-size: 14px;
+  }
+    }
